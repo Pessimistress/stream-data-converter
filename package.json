@@ -1,0 +1,33 @@
+{
+  "name": "stream-data-converter",
+  "version": "0.1.0",
+  "description": "Node.js stream transforms for processing large data files",
+  "files": [
+    "src",
+    "dist",
+    "README.md"
+  ],
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "eslint src test && jest",
+    "build": "babel src --out-dir dist"
+  },
+  "author": "cxiaoji@gmail.com",
+  "dependencies": {
+    "bottleneck": "^1.13.1",
+    "papaparse": "^5.2.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.10.3",
+    "@babel/core": "^7.10.3",
+    "@babel/node": "^7.10.3",
+    "@babel/preset-env": "^7.10.3",
+    "babel-jest": "^26.1.0",
+    "cli-color": "^1.1.0",
+    "eslint": "^7.5.0",
+    "jest": "^26.1.0"
+  },
+  "engines": {
+    "node": ">=10"
+  }
+}
