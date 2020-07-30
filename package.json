@@ -1,12 +1,17 @@
 {
   "name": "stream-data-converter",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Node.js stream transforms for processing large data files",
   "files": [
     "src",
     "dist",
     "README.md"
   ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pessimistress/stream-data-converter.git"
+  },
   "main": "dist/index.js",
   "scripts": {
     "test": "eslint src test && jest",
