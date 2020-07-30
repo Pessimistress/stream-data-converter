@@ -8,6 +8,7 @@ export default class CSVWriter extends BaseTransform {
     super({
       id: 'csvWriter',
       header: true,
+      newline: '\n',
       batchSize: 100,
       ...options
     });
@@ -26,8 +27,9 @@ export default class CSVWriter extends BaseTransform {
     } : this.buffer, {
       ...this.options,
       header: this.options.header && this.count === 0
-    });
+    }) + this.options.newline;
     this.count += this.buffer.length;
+    this.buffer.length = 0;
     this.push(result);
   }
 

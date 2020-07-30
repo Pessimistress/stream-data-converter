@@ -170,7 +170,8 @@ const writer = new CSVWriter(options);
 Options:
 
 - `id` (String, optional): identifier of this writer instance.
-- All options that are supported by [Papaparse.unparse](https://www.papaparse.com/docs#json-to-csv).
+- All options that are supported by [Papaparse.unparse](https://www.papaparse.com/docs#json-to-csv). The following defaults are used instead of the original default config:
+  + `newline`: `'\n'`
 - `batchSize`: The number of items to encode in a batch. Default `100`.
 
 #### JSONWriter
