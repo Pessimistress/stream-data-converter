@@ -30,6 +30,8 @@ export default class CustomTransform extends BaseTransform {
   yield(item, recursive = true) {
     if (item === null || item === undefined) {
       // ignore;
+    } else if (item instanceof Buffer || item instanceof Uint8Array) {
+      this.push(item);
     } else if (recursive && Array.isArray(item)) {
       for (const d of item) {
         this.yield(d, false);

@@ -120,7 +120,8 @@ Transforms an iterable from upstream to another iterable. Usually consumes the o
 For each incoming iteration, `Transform` calls a callback function. This callback is expected to return one of the following:
 
 - `null` or `undefined`: ignore this item
-- Object or string: push a single item to the output iterable
+- `Buffer` or `Uint8Array`: push directly to the output iterable
+- Object or string: serialize and push a single item to the output iterable
 - Array: push multiple items to the output iterable
 
 ```js
