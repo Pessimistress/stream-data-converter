@@ -68,7 +68,7 @@ export default class JSONReader extends BaseTransform {
 
   processBuffer(cb) {
     if (this.state === START) {
-      this.streamStartPos = this.buffer.search(/\[(\[|\{)/);
+      this.streamStartPos = this.buffer.search(/\[\s*(\[|\{)/);
       if (this.streamStartPos >= 0) {
         this.bracketDepthSquare = 0;
         this.streamStartPos++;
