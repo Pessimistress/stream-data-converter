@@ -49,6 +49,6 @@ export default class CSVWriter extends BaseTransform {
 
   _flush(cb) {
     this.serialize();
-    cb;
+    cb();
   }
 }
